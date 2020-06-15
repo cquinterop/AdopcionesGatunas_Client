@@ -80,7 +80,7 @@ export default {
     getData() {
       this.cats = []
       axios
-        .get(`http://localhost:5000/get_cats?gender=${this.current_gender}`)
+        .get(`http://localhost:3000/api/v1/get/cats?gender=${this.current_gender}`)
         .then(({ data: cats }) => (this.cats = cats))
         .catch(err => console.log(err));
     }
